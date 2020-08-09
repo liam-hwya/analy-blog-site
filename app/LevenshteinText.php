@@ -4,11 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class MetaphoneText extends Model
+class LevenshteinText extends Model
 {
     public function getBlog(){
-      
-      return $this->belongsTo('App\Blog','blog_id');
+        return $this->belongsTo('App\Blog','blog_id');
     }
-    
 }

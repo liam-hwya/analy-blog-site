@@ -18,6 +18,12 @@ class Blog extends Model
     public function metaphoneText(){
       return $this->hasOne('App\MetaphoneText');
     }
+
+    public function soundexText(){
+      return $this->hasOne('App\SoundexText');
+    }
     
-    
+    public function levenshteinText(){
+      return $this->hasOne('App\LevenshteinText');
+    }
 }

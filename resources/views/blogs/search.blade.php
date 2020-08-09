@@ -6,14 +6,16 @@
     <h2>Search Result</h2>
     <br>
     @if (!empty($results))
-    <div class="alert alert-search">{{ $message }}</div>
+  <div class="alert alert-search">{{ $message }} in {{ $duration }}</div>
     <div class="search-results">
 
       {{-- Start Traditional way --}}
       {{-- *************************************** --}}
+      
         {{-- End Traditional Way --}}
 
         {{-- Start metaphone way --}}
+        {{-- ************************************* --}}
         @foreach($results as $result)
         <div class="result">
           <div>
@@ -21,7 +23,7 @@
               <h3 class="blog-title">
                 <?php
                   $result['title'] = str_replace($keyword,"<span class='highlight'>$keyword</span>",$result['title']);
-                  echo $result['title']
+                  echo $result['title'];
                 ?>
               </h3>
             </a>

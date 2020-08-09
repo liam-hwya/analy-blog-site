@@ -21,5 +21,6 @@ class TestController extends Controller
     public function add(){
       return view('blogs.add');
     }
+
     
 }
